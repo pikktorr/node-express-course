@@ -42,7 +42,7 @@
   --red-light: #f8d7da;
   --red-dark: #842029;
   --green-light: #d1e7dd;
-  --green-dark: #0f5132;
+  --green-dark: #0c7946;
   /* box shadows */
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -348,4 +348,8 @@ h5 + h5 {
 .alert-danger {
   width: 600px;
   text-align: center;
+}
+.form-success {
+  color: var(--green-dark);
+  text-transform: capitalize;
 }
