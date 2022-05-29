@@ -1,34 +1,17 @@
-const http = require('http')
+const http = require('http');
 
-const server = http.createServer((req, res) => {
-  //   if (req.url === '/') {
-  //     res.end('Welcome to our home page')
-  //   }
-  //   if (req.url === '/about') {
-  //     res.end('Here is our short history')
-  //   }
-  //   res.end(`
-  //   <h1>Oops!</h1>
-  // <p>We can't seem to find the page you are looking for</p>
-  // <a href="/">back home</a>
-  //   `)
-  // ###################################
-  // ###################################
-  //
-  //  IF YOU GET ERRORS WHILE USING ABOVE SETUP,
-  // SWITCH TO IF, ELSE IF, ELSE (BELOW)
-  // WE COVER THE CAUSE, LATER IN EXPRESS TUTORIAL
-  if (req.url === '/') {
-    res.end('Welcome to our home page')
-  } else if (req.url === '/about') {
-    res.end('Here is our short history')
-  } else {
-    res.end(`
-    <h1>Oops!</h1>
-    <p>We can't seem to find the page you are looking for</p>
-    <a href="/">back home</a>
-    `)
-  }
-})
+const server = http.createServer((request, response)=> {
+if(request.url === '/'){
+  response.end('Welcome to our home page');
+}
+if(request.url === '/about'){
+  response.end('About page');
+}
+response.end(`
+  <h1>Oops!</h1>
+  <p>I can't find the page you are looking for!</p>
+  <a href='/'>Go home</a>
+`)
+});
 
-server.listen(5000)
+server.listen(5050);
